@@ -1,11 +1,5 @@
 # SS11 HW04 - Chống chịu lỗi và Dead Letter Queue
 
-**Sinh viên:** Trương Hà Cẩm Linh
-
-**Lớp:** IT214
-
-**Mã sinh viên:** PTIT056
-
 ## 1. Bài toán
 
 Inventory Service đọc sự kiện đơn hàng từ topic `storex-order-events`. Một message có JSON sai hoặc có `productId: null` có thể làm consumer ném ngoại lệ. Nếu không có cơ chế xử lý lỗi, consumer tiếp tục đọc lại cùng offset, khiến partition bị chặn và các đơn hàng hợp lệ phía sau không được xử lý.
